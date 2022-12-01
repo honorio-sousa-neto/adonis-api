@@ -7,6 +7,8 @@ export default class CommentsController {
     const body = request.body()
     const momentId = params.momentId
 
+    // Break the application if there is no momentId passed
+    
     await Moment.findOrFail(momentId)
 
     body.momentId = momentId
